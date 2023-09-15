@@ -1,0 +1,7 @@
+import hashlib 
+
+str = "MotDePasseCool123"
+
+result = hashlib.sha512(str.encode()) 
+
+print(result.hexdigest())
