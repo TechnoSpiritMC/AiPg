@@ -1,0 +1,21 @@
+MAIN CLASS:
+AiPr : Main class
+
+FORMATTING:
+Rl   : Class responsible for red text coloring.
+Gl   : Class responsible for green text coloring.
+Bl   : Class responsible for blue text coloring.
+Co   : Class responsible for rgb text coloring.
+
+ENCRYPTION:
+Ha   : Class handling the hash function.
+e85  : Class handling the Ascii85 encryption.
+
+DECRYPTION:
+d85  : Class handling the Ascii85 decryption.
+
+FILE INTERRACTION:
+Fs   : Class handling file writing/modification.
+
+CREDITS:
+
