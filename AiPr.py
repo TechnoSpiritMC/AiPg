@@ -1,6 +1,8 @@
 from Co import c
 from Ha import Hash
 from Fs import FileSave
+from Re import r
+from Fc import FileCreate
 
 import difflib
 
@@ -9,7 +11,10 @@ print(c(0, 255, 150, "Avez vous un compte? (o/n)"))
 
 tmp_001 = input("> ")
 
-if "o":
+if tmp_001 != "o" and tmp_001 != "n":
+    print(r("Oups! On dirait que vous avez appuyé sur la mauvaise touche... Choisissez seulement entre \"o\" et \"n\"."))
+
+if tmp_001 == "n":
     print(c(0, 255, 150, "Entrez un nom d'utilisateur:"))
     tmp_002 = input("> ")
 
@@ -38,6 +43,10 @@ f"""
 Name = {tmp_002}
 Password = {Hash(tmp_003)}
 """, "85")
+    
+if tmp_001 == "o":
+    FileCreate("Dt85")
+
 
     
     
