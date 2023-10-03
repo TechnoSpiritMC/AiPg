@@ -1,24 +1,26 @@
 from d85 import d85
+from Co import c
 
-def FileCreate(OriginName = None, Targetname = None, Content = None, Decryption = None):
+def FileCreate(_OriginName = None, Targetname = None, Content = None, Decryption = None):
     """Decryption currenly avalible:
     Ascii84"""
 
-    if OriginName == "__DATA__":
-        Targetname == "Dt85.temp.py"
-        Decryption == "85"
+    _Content = ""
 
-    if Decryption == "85":
+    if _OriginName == "__DATA__":
+        Targetname = "Dt85.temp.py"
+        OriginName = "Dt85"
+
+    if _OriginName == "__DATA__":
         
-        with open(OriginName, "r") as OriginOpen:
+        with open("Dt85", "r") as OriginOpen:
             OriginContent = OriginOpen.readlines()
             OriginOpen.close()
 
-        _Content = d85(OriginContent)
 
 
 
-    else: _Content == Content
+    else: _Content == OriginContent
 
 
     with open(Targetname, "w") as Fs_o:
